@@ -24,7 +24,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>Academic Project Page</title>
+  <title>Spatio-Temporal Context Prompting for Zero-Shot Action Detection</title>
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
@@ -52,21 +52,24 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
+            <h1 class="title is-1 publication-title">ST-CLIP</h1>
+            <h2 class="title is-2 publication-title">Spatio-Temporal Context Prompting for <br> Zero-Shot Action Detection</h2>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
+                <a href="" target="_blank">Wei-Jhe Huang</a><sup>1</sup>,</span>
                 <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
+                  <a href="" target="_blank">Min-Hung Chen</a><sup>2</sup>,</span>
                   <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
+                    <a href="" target="_blank">Shang-Hong Lai</a><sup>1</sup>
                   </span>
                   </div>
 
                   <div class="is-size-5 publication-authors">
-                    <span class="author-block">Institution Name<br>Conferance name and year</span>
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+                    <span class="author-block">
+                      <sup>1</sup>National Tsing Hua University, Taiwan &nbsp;
+                      <sup>2</sup>NVIDIA
+                    </span>
                   </div>
 
                   <div class="column has-text-centered">
@@ -82,28 +85,6 @@
                       </a>
                     </span>
 
-                    <!-- Supplementary PDF link -->
-                    <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
-                    </a>
-                  </span>
-
-                  <!-- Github link -->
-                  <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Code</span>
-                  </a>
-                </span>
-
                 <!-- ArXiv abstract Link -->
                 <span class="link-block">
                   <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
@@ -114,6 +95,16 @@
                   <span>arXiv</span>
                 </a>
               </span>
+              <!-- Github link -->
+              <span class="link-block">
+                <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                  <i class="fab fa-github"></i>
+                </span>
+                <span>Code</span>
+              </a>
+            </span>
             </div>
           </div>
         </div>
@@ -122,34 +113,51 @@
   </div>
 </section>
 
-
-<!-- Teaser video-->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <!-- Your video here -->
-        <source src="static/videos/banner_video.mp4"
-        type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
-      </h2>
-    </div>
-  </div>
-</section>
-<!-- End teaser video -->
-
 <!-- Paper abstract -->
-<section class="section hero is-light">
+<section class="section hero">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+            Spatio-temporal action detection encompasses the tasks
+            of localizing and classifying individual actions within a
+            video. Recent works aim to enhance this process by incorporating
+            interaction modeling, which captures the relationship
+            between people and their surrounding context.
+            However, these approaches have primarily focused on fullysupervised
+            learning, and the current limitation lies in the
+            lack of generalization capability to recognize unseen action
+            categories. In this paper, we aim to adapt the pretrained
+            image-language models to detect unseen actions.
+            To this end, we propose a method which can effectively
+            leverage the rich knowledge of visual-language models to
+            perform Person-Context Interaction. Meanwhile, our Context
+            Prompting module will utilize contextual information
+            to prompt labels, thereby enhancing the generation of more
+            representative text features. Moreover, to address the challenge
+            of recognizing distinct actions by multiple people at
+            the same timestamp, we design the Interest Token Spotting
+            mechanism which employs pretrained visual knowledge to
+            find each person’s interest context tokens, and then these
+            tokens will be used for prompting to generate text features
+            tailored to each individual. To evaluate the ability to detect
+            unseen actions, we propose a comprehensive benchmark on
+            J-HMDB, UCF101-24, and AVA datasets. The experiments
+            show that our method achieves superior results compared to
+            previous approaches and can be further extended to multiaction
+            videos, bringing it closer to real-world applications.
           </p>
+          <!-- Teaser image-->
+          <section class="hero teaser">
+            <div class="container is-max-desktop">
+              <div class="hero-body">
+                <img src="static/images/teaser.svg" alt="MY ALT TEXT" class="center"/>
+              </div>
+            </div>
+          </section>
+          <!-- End teaser image -->
         </div>
       </div>
     </div>
@@ -157,122 +165,39 @@
 </section>
 <!-- End paper abstract -->
 
-
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
-    </div>
-  </div>
-</div>
-</div>
-</section>
-<!-- End image carousel -->
-
-
-
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- Youtube embed code here -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
+<!-- ST-CLIP framework -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop has-text-centered">
+    <h2 class="title is-3">ST-CLIP framework</h2>
+    <!-- framework image-->
+    <img src="static/images/framework.svg" alt="MY ALT TEXT" class="framework"/>
+    <!-- End framework image -->
+    <div class="content has-text-justified">
+      <p>
+      We first extract the person tokens for the person bounding boxes detected from each frame. Then, we
+      perform temporal modeling on the neighboring frames to obtain the context tokens. After that, we leverage the CLIP’s visual knowledge
+      to perform person-context interaction on these tokens. In addition, we utilize the attention weight in each encoder layer to find the interest
+      tokens for each person, then the Context Prompting layer will use these visual tokens to prompt the class names. Finally, the cosine
+      similarities between person-context relational tokens and the label prompting features determine the classification scores for the actions.
+      </p>
     </div>
   </div>
 </section>
-<!-- End youtube video -->
+<!-- ST-CLIP framework -->
 
-
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-      </div>
+<!-- Experimental results -->
+<section class="section hero">
+  <div class="container is-max-desktop has-text-centered">
+    <h2 class="title is-3">Experimental results</h2>
+    <!-- framework image-->
+    
+    <!-- End framework image -->
+    <div class="content has-text-justified">
+      
     </div>
   </div>
 </section>
-<!-- End video carousel -->
-
-
-
-
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
-      </div>
-    </div>
-  </section>
-<!--End paper poster -->
-
+<!-- Experimental results -->
 
 <!--BibTex citation -->
   <section class="section" id="BibTeX">
