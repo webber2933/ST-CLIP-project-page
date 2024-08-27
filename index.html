@@ -126,7 +126,7 @@
             video. Recent works aim to enhance this process by incorporating
             interaction modeling, which captures the relationship
             between people and their surrounding context.
-            However, these approaches have primarily focused on fullysupervised
+            However, these approaches have primarily focused on fully-supervised
             learning, and the current limitation lies in the
             lack of generalization capability to recognize unseen action
             categories. In this paper, we aim to adapt the pretrained
@@ -146,7 +146,7 @@
             unseen actions, we propose a comprehensive benchmark on
             J-HMDB, UCF101-24, and AVA datasets. The experiments
             show that our method achieves superior results compared to
-            previous approaches and can be further extended to multiaction
+            previous approaches and can be further extended to multi-action
             videos, bringing it closer to real-world applications.
           </p>
           <!-- Teaser image-->
@@ -185,15 +185,92 @@
 </section>
 <!-- ST-CLIP framework -->
 
+<!-- benchmarks -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop has-text-centered">
+      <h2 class="title is-3">Proposed Benchmarks</h2>
+      <div class="content has-text-justified framework">
+        <p>
+          We establish benchmarks for zero-shot spatial-temporal
+          action detection on three popular datasets: J-HMDB,
+          UCF101-24, and AVA. For J-HMDB and UCF101-24, we take 75% action classes for training,
+          and the remaining 25% for testing. Besides, we conduct cross-validation with varying train/test
+          label combinations. For AVA, we randomly select some training videos, ensuring
+          that they all lack samples of the same classes. These
+          missing classes are then treated as unseen classes for evaluation.
+          During the evaluation phase, we test all classes in the
+          validation videos, but the focus is solely on evaluating the
+          performance on unseen classes. The following are the testing classes in each label split.
+        </p>
+      </div>
+    </div>
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item">
+          <!-- Your image here -->
+          <img src="static/images/ZS_AVA_benchmark.svg" alt="MY ALT TEXT" class="benchmark"/>
+        </div>
+        <div class="item">
+          <!-- Your image here -->
+          <img src="static/images/ZS_JHMDB_benchmark.svg" alt="MY ALT TEXT" class="benchmark"/>
+        </div>
+        <div class="item">
+          <!-- Your image here -->
+          <img src="static/images/ZS_UCF_benchmark.svg" alt="MY ALT TEXT" class="benchmark"/>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- benchmarks -->
+
 <!-- Experimental results -->
-<section class="section hero">
-  <div class="container is-max-desktop has-text-centered">
-    <h2 class="title is-3">Experimental results</h2>
-    <!-- framework image-->
-    
-    <!-- End framework image -->
-    <div class="content has-text-justified">
-      
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container is-max-desktop has-text-centered">
+      <h2 class="title is-3">Experimental results</h2>
+      <div class="content has-text-justified framework">
+        <p>
+          <b>1. baseline</b>: For a frame with detected
+            individuals, the baseline utilizes the pretrained image
+            encoder of CLIP to extract the image feature of this frame.
+            Subsequently, it calculates the cosine similarities with the
+            text features of each class name, which are then considered
+            as the action classification scores for these individuals.
+          <br><br>
+          <b>2. baseline (person crop)</b>: Based on 1, we further crop out parts of each person
+          to obtain their respective image features for classification.
+          <br><br>
+          <b>3. <a href="https://openaccess.thecvf.com/content/ICCV2023W/MMFM/html/Huang_Interaction-Aware_Prompting_for_Zero-Shot_Spatio-Temporal_Action_Detection_ICCVW_2023_paper.html" style="color:blue;">iCLIP</a></b>: Separately classify actions for each individual. (Their classification units are the same as ours.)
+          <br><br>
+          <b>4. Video classification methods (<a href="https://arxiv.org/abs/2109.08472" style="color:blue;">ActionCLIP</a>, <a href="https://link.springer.com/chapter/10.1007/978-3-031-19833-5_7" style="color:blue;">A5</a>, <a href="https://link.springer.com/chapter/10.1007/978-3-031-19772-7_1" style="color:blue;">X-CLIP</a>, <a href="https://openaccess.thecvf.com/content/CVPR2023/html/Wasim_Vita-CLIP_Video_and_Text_Adaptive_CLIP_via_Multimodal_Prompting_CVPR_2023_paper.html" style="color:blue;">Vita-CLIP</a>)</b>: For J-HMDB and UCF101-24, since each video in
+          both datasets contains only a single action, These methods can initially classify
+          the entire video into an action class and then consider
+          all detected individuals in the video as performing this action. As for AVA, we further narrowed
+          the scope of classification from the entire video to tracklets.
+          <br><br>
+          <b>5. Ours with the assumption of single-action video</b>: We perform soft voting on each person’s classification
+          score, extending our method to suit this scenario.
+           
+        </p>
+      </div>    
+    </div>
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item">
+          <!-- Your image here -->
+          <img src="static/images/ZS_AVA_evaluation.svg" alt="MY ALT TEXT" class="result"/>
+        </div>
+        <div class="item">
+          <!-- Your image here -->
+          <img src="static/images/ZS_JHMDB_evaluation.svg" alt="MY ALT TEXT" class="result"/>
+        </div>
+        <div class="item">
+          <!-- Your image here -->
+          <img src="static/images/ZS_UCF_evaluation.svg" alt="MY ALT TEXT" class="result"/>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -203,29 +280,10 @@
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>BibTex Code Here</code></pre>
+      <pre><code></code></pre>
     </div>
 </section>
 <!--End BibTex citation -->
-
-
-  <footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-
-          <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-
-        </div>
-      </div>
-    </div>
-  </div>
-</footer>
 
 <!-- Statcounter tracking code -->
   
