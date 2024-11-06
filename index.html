@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
   <!-- Replace the content tag with appropriate information -->
   <meta name="description" content="DESCRIPTION META TAG">
-  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
-  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
-  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG" />
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG" />
+  <meta property="og:url" content="URL OF THE WEBSITE" />
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
   <meta property="og:image" content="static/image/your_banner_image.png" />
-  <meta property="og:image:width" content="1200"/>
-  <meta property="og:image:height" content="630"/>
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
 
 
   <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
@@ -26,15 +27,13 @@
 
   <title>Spatio-Temporal Context Prompting for Zero-Shot Action Detection</title>
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-  rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="static/css/index.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -44,6 +43,7 @@
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
 </head>
+
 <body>
 
 
@@ -53,251 +53,269 @@
         <div class="columns is-centered">
           <div class="column has-text-centered">
             <h1 class="title is-1 publication-title">ST-CLIP</h1>
-            <h2 class="title is-2 publication-title">Spatio-Temporal Context Prompting for <br> Zero-Shot Action Detection</h2>
+            <h2 class="title is-2 publication-title">Spatio-Temporal Context Prompting for <br> Zero-Shot Action
+              Detection</h2>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
                 <a href="" target="_blank">Wei-Jhe Huang</a><sup>1</sup>,</span>
-                <span class="author-block">
-                  <a href="" target="_blank">Min-Hung Chen</a><sup>2</sup>,</span>
-                  <span class="author-block">
-                    <a href="" target="_blank">Shang-Hong Lai</a><sup>1</sup>
-                  </span>
-                  </div>
+              <span class="author-block">
+                <a href="" target="_blank">Min-Hung Chen</a><sup>2</sup>,</span>
+              <span class="author-block">
+                <a href="" target="_blank">Shang-Hong Lai</a><sup>1</sup>
+              </span>
+            </div>
 
-                  <div class="is-size-5 publication-authors">
-                    <span class="author-block">
-                      <sup>1</sup>National Tsing Hua University, Taiwan &nbsp;
-                      <sup>2</sup>NVIDIA
-                    </span>
-                  </div>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <sup>1</sup>National Tsing Hua University, Taiwan &nbsp;
+                <sup>2</sup>NVIDIA
+              </span>
+            </div>
 
-                  <div class="column has-text-centered">
-                    <div class="publication-links">
-                         <!-- Arxiv PDF link -->
-                      <span class="link-block">
-                        <a href="https://arxiv.org/pdf/2408.15996.pdf" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
-                        </span>
-                        <span>Paper</span>
-                      </a>
+            <div class="is-size-4 publication-authors">
+              <span class="author-block">
+                WACV 2025
+              </span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- Arxiv PDF link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/pdf/2408.15996.pdf" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
                     </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
 
                 <!-- ArXiv abstract Link -->
                 <span class="link-block">
                   <a href="https://arxiv.org/abs/2408.15996" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
-              <!-- Github link -->
-              <span class="link-block">
-                <a href="https://github.com/YOUR REPO HERE" target="_blank"
-                class="external-link button is-normal is-rounded is-dark">
-                <span class="icon">
-                  <i class="fab fa-github"></i>
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
                 </span>
-                <span>Code</span>
-              </a>
-            </span>
+                <!-- Github link -->
+                <span class="link-block">
+                  <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Paper abstract -->
-<section class="section hero">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            Spatio-temporal action detection encompasses the tasks
-            of localizing and classifying individual actions within a
-            video. Recent works aim to enhance this process by incorporating
-            interaction modeling, which captures the relationship
-            between people and their surrounding context.
-            However, these approaches have primarily focused on fully-supervised
-            learning, and the current limitation lies in the
-            lack of generalization capability to recognize unseen action
-            categories. In this paper, we aim to adapt the pretrained
-            image-language models to detect unseen actions.
-            To this end, we propose a method which can effectively
-            leverage the rich knowledge of visual-language models to
-            perform Person-Context Interaction. Meanwhile, our Context
-            Prompting module will utilize contextual information
-            to prompt labels, thereby enhancing the generation of more
-            representative text features. Moreover, to address the challenge
-            of recognizing distinct actions by multiple people at
-            the same timestamp, we design the Interest Token Spotting
-            mechanism which employs pretrained visual knowledge to
-            find each person’s interest context tokens, and then these
-            tokens will be used for prompting to generate text features
-            tailored to each individual. To evaluate the ability to detect
-            unseen actions, we propose a comprehensive benchmark on
-            J-HMDB, UCF101-24, and AVA datasets. The experiments
-            show that our method achieves superior results compared to
-            previous approaches and can be further extended to multi-action
-            videos, bringing it closer to real-world applications.
-          </p>
-          <!-- Teaser image-->
-          <section class="hero teaser">
-            <div class="container is-max-desktop">
-              <div class="hero-body">
-                <img src="static/images/teaser.svg" alt="MY ALT TEXT" class="center"/>
+  <!-- Paper abstract -->
+  <section class="section hero">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Spatio-temporal action detection encompasses the tasks
+              of localizing and classifying individual actions within a
+              video. Recent works aim to enhance this process by incorporating
+              interaction modeling, which captures the relationship
+              between people and their surrounding context.
+              However, these approaches have primarily focused on fully-supervised
+              learning, and the current limitation lies in the
+              lack of generalization capability to recognize unseen action
+              categories. In this paper, we aim to adapt the pretrained
+              image-language models to detect unseen actions.
+              To this end, we propose a method which can effectively
+              leverage the rich knowledge of visual-language models to
+              perform Person-Context Interaction. Meanwhile, our Context
+              Prompting module will utilize contextual information
+              to prompt labels, thereby enhancing the generation of more
+              representative text features. Moreover, to address the challenge
+              of recognizing distinct actions by multiple people at
+              the same timestamp, we design the Interest Token Spotting
+              mechanism which employs pretrained visual knowledge to
+              find each person’s interest context tokens, and then these
+              tokens will be used for prompting to generate text features
+              tailored to each individual. To evaluate the ability to detect
+              unseen actions, we propose a comprehensive benchmark on
+              J-HMDB, UCF101-24, and AVA datasets. The experiments
+              show that our method achieves superior results compared to
+              previous approaches and can be further extended to multi-action
+              videos, bringing it closer to real-world applications.
+            </p>
+            <!-- Teaser image-->
+            <section class="hero teaser">
+              <div class="container is-max-desktop">
+                <div class="hero-body">
+                  <img src="static/images/teaser.svg" alt="MY ALT TEXT" class="center" />
+                </div>
               </div>
-            </div>
-          </section>
-          <!-- End teaser image -->
+            </section>
+            <!-- End teaser image -->
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-<!-- End paper abstract -->
+  </section>
+  <!-- End paper abstract -->
 
-<!-- ST-CLIP framework -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop has-text-centered">
-    <h2 class="title is-3">ST-CLIP framework</h2>
-    <!-- framework image-->
-    <img src="static/images/framework.svg" alt="MY ALT TEXT" class="framework"/>
-    <!-- End framework image -->
-    <div class="content has-text-justified framework">
-      <p>
-      We first extract the person tokens for the person bounding boxes detected from each frame. Then, we
-      perform temporal modeling on the neighboring frames to obtain the context tokens. After that, we leverage the CLIP’s visual knowledge
-      to perform person-context interaction on these tokens. In addition, we utilize the attention weight in each encoder layer to find the interest
-      tokens for each person, then the Context Prompting layer will use these visual tokens to prompt the class names. Finally, the cosine
-      similarities between person-context relational tokens and the label prompting features determine the classification scores for the actions.
-      </p>
-    </div>
-  </div>
-</section>
-<!-- ST-CLIP framework -->
-
-<!-- benchmarks -->
-<section class="hero is-small">
-  <div class="hero-body">
+  <!-- ST-CLIP framework -->
+  <section class="section hero is-light">
     <div class="container is-max-desktop has-text-centered">
-      <h2 class="title is-3">Proposed Benchmarks</h2>
+      <h2 class="title is-3">ST-CLIP framework</h2>
+      <!-- framework image-->
+      <img src="static/images/framework.svg" alt="MY ALT TEXT" class="framework" />
+      <!-- End framework image -->
       <div class="content has-text-justified framework">
         <p>
-          We establish benchmarks for zero-shot spatial-temporal
-          action detection on three popular datasets: J-HMDB,
-          UCF101-24, and AVA. For J-HMDB and UCF101-24, we take 75% action classes for training,
-          and the remaining 25% for testing. Besides, we conduct cross-validation with varying train/test
-          label combinations. For AVA, we randomly select some training videos, ensuring
-          that they all lack samples of the same classes. These
-          missing classes are then treated as unseen classes for evaluation.
-          During the evaluation phase, we test all classes in the
-          validation videos, but the focus is solely on evaluating the
-          performance on unseen classes. The following are the testing classes in each label split.
+          We first extract the person tokens for the person bounding boxes detected from each frame. Then, we
+          perform temporal modeling on the neighboring frames to obtain the context tokens. After that, we leverage the
+          CLIP’s visual knowledge
+          to perform person-context interaction on these tokens. In addition, we utilize the attention weight in each
+          encoder layer to find the interest
+          tokens for each person, then the Context Prompting layer will use these visual tokens to prompt the class
+          names. Finally, the cosine
+          similarities between person-context relational tokens and the label prompting features determine the
+          classification scores for the actions.
         </p>
       </div>
     </div>
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item">
-          <!-- Your image here -->
-          <img src="static/images/ZS_AVA_benchmark.svg" alt="MY ALT TEXT" class="benchmark"/>
+  </section>
+  <!-- ST-CLIP framework -->
+
+  <!-- benchmarks -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container is-max-desktop has-text-centered">
+        <h2 class="title is-3">Proposed Benchmarks</h2>
+        <div class="content has-text-justified framework">
+          <p>
+            We establish benchmarks for zero-shot spatial-temporal
+            action detection on three popular datasets: J-HMDB,
+            UCF101-24, and AVA. For J-HMDB and UCF101-24, we take 75% action classes for training,
+            and the remaining 25% for testing. Besides, we conduct cross-validation with varying train/test
+            label combinations. For AVA, we randomly select some training videos, ensuring
+            that they all lack samples of the same classes. These
+            missing classes are then treated as unseen classes for evaluation.
+            During the evaluation phase, we test all classes in the
+            validation videos, but the focus is solely on evaluating the
+            performance on unseen classes. The following are the testing classes in each label split.
+          </p>
         </div>
-        <div class="item">
-          <!-- Your image here -->
-          <img src="static/images/ZS_JHMDB_benchmark.svg" alt="MY ALT TEXT" class="benchmark"/>
-        </div>
-        <div class="item">
-          <!-- Your image here -->
-          <img src="static/images/ZS_UCF_benchmark.svg" alt="MY ALT TEXT" class="benchmark"/>
+      </div>
+      <div class="container">
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item">
+            <!-- Your image here -->
+            <img src="static/images/ZS_AVA_benchmark.svg" alt="MY ALT TEXT" class="benchmark" />
+          </div>
+          <div class="item">
+            <!-- Your image here -->
+            <img src="static/images/ZS_JHMDB_benchmark.svg" alt="MY ALT TEXT" class="benchmark" />
+          </div>
+          <div class="item">
+            <!-- Your image here -->
+            <img src="static/images/ZS_UCF_benchmark.svg" alt="MY ALT TEXT" class="benchmark" />
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-<!-- benchmarks -->
+  </section>
+  <!-- benchmarks -->
 
-<!-- Experimental results -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container is-max-desktop has-text-centered">
-      <h2 class="title is-3">Experimental results</h2>
-      <div class="content has-text-justified framework">
-        <p>
-          <b>1. baseline</b>: For a frame with detected
+  <!-- Experimental results -->
+  <section class="hero is-small is-light">
+    <div class="hero-body">
+      <div class="container is-max-desktop has-text-centered">
+        <h2 class="title is-3">Experimental results</h2>
+        <div class="content has-text-justified framework">
+          <p>
+            <b>1. baseline</b>: For a frame with detected
             individuals, the baseline utilizes the pretrained image
             encoder of CLIP to extract the image feature of this frame.
             Subsequently, it calculates the cosine similarities with the
             text features of each class name, which are then considered
             as the action classification scores for these individuals.
-          <br><br>
-          <b>2. baseline (person crop)</b>: Based on 1, we further crop out parts of each person
-          to obtain their respective image features for classification.
-          <br><br>
-          <b>3. <a href="https://openaccess.thecvf.com/content/ICCV2023W/MMFM/html/Huang_Interaction-Aware_Prompting_for_Zero-Shot_Spatio-Temporal_Action_Detection_ICCVW_2023_paper.html" style="color:blue;">iCLIP</a></b>: Separately classify actions for each individual. (Their classification units are the same as ours.)
-          <br><br>
-          <b>4. Video classification methods (<a href="https://arxiv.org/abs/2109.08472" style="color:blue;">ActionCLIP</a>, <a href="https://link.springer.com/chapter/10.1007/978-3-031-19833-5_7" style="color:blue;">A5</a>, <a href="https://link.springer.com/chapter/10.1007/978-3-031-19772-7_1" style="color:blue;">X-CLIP</a>, <a href="https://openaccess.thecvf.com/content/CVPR2023/html/Wasim_Vita-CLIP_Video_and_Text_Adaptive_CLIP_via_Multimodal_Prompting_CVPR_2023_paper.html" style="color:blue;">Vita-CLIP</a>)</b>: For J-HMDB and UCF101-24, since each video in
-          both datasets contains only a single action, These methods can initially classify
-          the entire video into an action class and then consider
-          all detected individuals in the video as performing this action. As for AVA, we further narrowed
-          the scope of classification from the entire video to tracklets.
-          <br><br>
-          <b>5. Ours with the assumption of single-action video</b>: We perform soft voting on each person’s classification
-          score, extending our method to suit this scenario.
-           
-        </p>
-      </div>    
-    </div>
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item">
-          <!-- Your image here -->
-          <img src="static/images/ZS_AVA_evaluation.svg" alt="MY ALT TEXT" class="result"/>
+            <br><br>
+            <b>2. baseline (person crop)</b>: Based on 1, we further crop out parts of each person
+            to obtain their respective image features for classification.
+            <br><br>
+            <b>3. <a
+                href="https://openaccess.thecvf.com/content/ICCV2023W/MMFM/html/Huang_Interaction-Aware_Prompting_for_Zero-Shot_Spatio-Temporal_Action_Detection_ICCVW_2023_paper.html"
+                style="color:blue;">iCLIP</a></b>: Separately classify actions for each individual. (Their
+            classification units are the same as ours.)
+            <br><br>
+            <b>4. Video classification methods (<a href="https://arxiv.org/abs/2109.08472"
+                style="color:blue;">ActionCLIP</a>, <a
+                href="https://link.springer.com/chapter/10.1007/978-3-031-19833-5_7" style="color:blue;">A5</a>, <a
+                href="https://link.springer.com/chapter/10.1007/978-3-031-19772-7_1" style="color:blue;">X-CLIP</a>, <a
+                href="https://openaccess.thecvf.com/content/CVPR2023/html/Wasim_Vita-CLIP_Video_and_Text_Adaptive_CLIP_via_Multimodal_Prompting_CVPR_2023_paper.html"
+                style="color:blue;">Vita-CLIP</a>)</b>: For J-HMDB and UCF101-24, since each video in
+            both datasets contains only a single action, These methods can initially classify
+            the entire video into an action class and then consider
+            all detected individuals in the video as performing this action. As for AVA, we further narrowed
+            the scope of classification from the entire video to tracklets.
+            <br><br>
+            <b>5. Ours with the assumption of single-action video</b>: We perform soft voting on each person’s
+            classification
+            score, extending our method to suit this scenario.
+
+          </p>
         </div>
-        <div class="item">
-          <!-- Your image here -->
-          <img src="static/images/ZS_JHMDB_evaluation.svg" alt="MY ALT TEXT" class="result"/>
-        </div>
-        <div class="item">
-          <!-- Your image here -->
-          <img src="static/images/ZS_UCF_evaluation.svg" alt="MY ALT TEXT" class="result"/>
+      </div>
+      <div class="container">
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item">
+            <!-- Your image here -->
+            <img src="static/images/ZS_AVA_evaluation.svg" alt="MY ALT TEXT" class="result" />
+          </div>
+          <div class="item">
+            <!-- Your image here -->
+            <img src="static/images/ZS_JHMDB_evaluation.svg" alt="MY ALT TEXT" class="result" />
+          </div>
+          <div class="item">
+            <!-- Your image here -->
+            <img src="static/images/ZS_UCF_evaluation.svg" alt="MY ALT TEXT" class="result" />
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-<!-- Experimental results -->
+  </section>
+  <!-- Experimental results -->
 
-<!--BibTex citation -->
+  <!--BibTex citation -->
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>@misc{huang2024spatiotemporalcontextpromptingzeroshot,
-        title={Spatio-Temporal Context Prompting for Zero-Shot Action Detection}, 
-        author={Wei-Jhe Huang and Min-Hung Chen and Shang-Hong Lai},
-        year={2024},
-        eprint={2408.15996},
-        archivePrefix={arXiv},
-        primaryClass={cs.CV},
-        url={https://arxiv.org/abs/2408.15996}, 
-  }</code></pre>
+      <pre><code>@article{huang2024spatio,
+        title={Spatio-Temporal Context Prompting for Zero-Shot Action Detection},
+        author={Huang, Wei-Jhe and Chen, Min-Hung and Lai, Shang-Hong},
+        journal={arXiv preprint arXiv:2408.15996},
+        year={2024}
+      }</code></pre>
     </div>
-</section>
-<!--End BibTex citation -->
+  </section>
+  <!--End BibTex citation -->
 
-<!-- Statcounter tracking code -->
-  
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+  <!-- Statcounter tracking code -->
 
-    <!-- End of Statcounter Code -->
+  <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
 
-  </body>
-  </html>
+  <!-- End of Statcounter Code -->
+
+</body>
+
+</html>
