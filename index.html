@@ -258,7 +258,14 @@
                 style="color:blue;">iCLIP</a></b>: Separately classify actions for each individual. (Their
             classification units are the same as ours.)
             <br><br>
-            <b>4. Video classification methods (<a href="https://arxiv.org/abs/2109.08472"
+            <b>4. <a
+              href="https://arxiv.org/abs/2307.06942"
+              style="color:blue;">ViCLIP</a></b>: We also experiment with a video-language
+              model. We extract the video feature map using a video encoder. Then, for each
+              person, we use their bounding box to perform ROIAlign, obtaining the person
+              feature for classification. (Their classification units are the same as ours.)
+            <br><br>
+            <b>5. Video classification methods (<a href="https://arxiv.org/abs/2109.08472"
                 style="color:blue;">ActionCLIP</a>, <a
                 href="https://link.springer.com/chapter/10.1007/978-3-031-19833-5_7" style="color:blue;">A5</a>, <a
                 href="https://link.springer.com/chapter/10.1007/978-3-031-19772-7_1" style="color:blue;">X-CLIP</a>, <a
@@ -269,10 +276,12 @@
             all detected individuals in the video as performing this action. As for AVA, we further narrowed
             the scope of classification from the entire video to tracklets.
             <br><br>
-            <b>5. Ours with the assumption of single-action video</b>: We perform soft voting on each person’s
+            <b>6. Ours with the assumption of single-action video</b>: We perform soft voting on each person’s
             classification
             score, extending our method to suit this scenario.
-
+            <br><br>
+            We present the experimental results for <b>unseen</b> classes in each label split. 
+            We also calculate the harmonic mean (H) of the average performance of both <b>base</b> and <b>unseen</b> classes.
           </p>
         </div>
       </div>
